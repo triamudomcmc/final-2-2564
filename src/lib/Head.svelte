@@ -19,13 +19,13 @@
   <meta property="twitter:image" content="/preview.jpg" />
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VRQG80E6MM"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BBNWR0TGWL"></script>
   <script>
     window.dataLayer = window.dataLayer || []
     function gtag() {
       dataLayer.push(arguments)
     }
     gtag("js", new Date())
-    gtag("config", "G-VRQG80E6MM")
+    gtag("config", "G-BBNWR0TGWL")
   </script>
 </svelte:head>
