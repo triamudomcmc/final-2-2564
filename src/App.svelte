@@ -13,6 +13,7 @@
   import ImageButton from "./lib/ImageButton.svelte"
 
   import { data, TProgramme } from "./lib/store"
+  import Head from "./lib/Head.svelte"
 
   const size = "2em"
 
@@ -38,6 +39,8 @@
   $: previewPath = getPath($data)
 
   function downloadFile() {
+    window.gtag("event", "generate_schedule", { data: $data })
+
     const a = document.createElement("a")
     a.href = previewPath
     a.download = `${$data.theme}-${$data.dimension}-${$data.class === "4" ? "M4" : "M5"}-${$data.programme}.jpg`
@@ -47,26 +50,7 @@
   }
 </script>
 
-<svelte:head>
-  <!-- Primary Meta Tags -->
-  <title>ตารางสอบปลายภาคเรียนที่ 2/2564</title>
-  <meta name="title" content="ตารางสอบปลายภาคเรียนที่ 2/2564" />
-  <meta name="description" content="เลือกแบบที่ต้องการแล้วกด Download เลย !" />
-
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://final-schedule.tucm.cc/" />
-  <meta property="og:title" content="ตารางสอบปลายภาคเรียนที่ 2/2564" />
-  <meta property="og:description" content="เลือกแบบที่ต้องการแล้วกด Download เลย !" />
-  <meta property="og:image" content="/preview.jpg" />
-
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image" />
-  <meta property="twitter:url" content="https://final-schedule.tucm.cc/" />
-  <meta property="twitter:title" content="ตารางสอบปลายภาคเรียนที่ 2/2564" />
-  <meta property="twitter:description" content="เลือกแบบที่ต้องการแล้วกด Download เลย !" />
-  <meta property="twitter:image" content="/preview.jpg" />
-</svelte:head>
+<Head />
 
 <main class="min-h-screen bg-[#fafafa] px-2 py-2 font-display sm:py-8 sm:px-12 lg:px-24">
   <header class="py-4">
