@@ -22,7 +22,7 @@
 
 <button
   on:click={handleClick}
-  class={classNames($data[name] === value ? "btn-selected" : "btn-normal", className, "py-2 px-6")}
+  class={classNames($data[name] === value ? "btn-selected" : "btn-normal", className, "h-full w-full p-0")}
 >
   <slot />
 </button>

@@ -29,6 +29,7 @@
     "vite": "^2.8.0"
   },
   "dependencies": {
+    "classnames": "^2.3.1",
     "svelte-material-icons": "^1.0.3"
   }
 }
