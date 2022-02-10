@@ -136,6 +136,7 @@
           <figcaption>Red ❤️</figcaption>
         </figure>
       </div>
+      <button on:click={downloadFile} class="btn-primary mt-6 px-6 py-2 text-gray-700">Download</button>
     </section>
     <section class="order-first sm:order-last sm:pl-4">
       <img src={previewPath} alt="Preview" class="max-h-[500px] w-full rounded-md object-contain" />
