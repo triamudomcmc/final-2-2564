@@ -48,7 +48,24 @@
 </script>
 
 <svelte:head>
+  <!-- Primary Meta Tags -->
   <title>ตารางสอบปลายภาคเรียนที่ 2/2564</title>
+  <meta name="title" content="ตารางสอบปลายภาคเรียนที่ 2/2564" />
+  <meta name="description" content="เลือกแบบที่ต้องการแล้วกด Download เลย !" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://final-schedule.tucm.cc/" />
+  <meta property="og:title" content="ตารางสอบปลายภาคเรียนที่ 2/2564" />
+  <meta property="og:description" content="เลือกแบบที่ต้องการแล้วกด Download เลย !" />
+  <meta property="og:image" content="/preview.jpg" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://final-schedule.tucm.cc/" />
+  <meta property="twitter:title" content="ตารางสอบปลายภาคเรียนที่ 2/2564" />
+  <meta property="twitter:description" content="เลือกแบบที่ต้องการแล้วกด Download เลย !" />
+  <meta property="twitter:image" content="/preview.jpg" />
 </svelte:head>
 
 <main class="min-h-screen bg-[#fafafa] px-2 py-2 font-display sm:py-8 sm:px-12 lg:px-24">
@@ -75,7 +92,7 @@
     <div
       class="flex flex-col items-center space-y-4 bg-[#db7ca4] px-6 py-12 text-white sm:items-start sm:px-24 sm:py-16"
     >
-      <h1 class="text-center text-xl font-semibold sm:text-left sm:text-4xl">ตารางสอบ Final - ปีการศึกษา 2/2564</h1>
+      <h1 class="text-center text-xl font-semibold sm:text-left sm:text-4xl">ตารางสอบ Final - ภาคเรียนที่ 2/2564</h1>
       <p class="text-label text-center font-light sm:text-left sm:text-xl">เลือกแบบที่ต้องการแล้วกด Download เลย !</p>
       <button on:click={downloadFile} class="btn-primary px-6 py-2 text-gray-700">Download</button>
     </div>
