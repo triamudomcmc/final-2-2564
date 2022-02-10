@@ -36,6 +36,15 @@
   }
 
   $: previewPath = getPath($data)
+
+  function downloadFile() {
+    const a = document.createElement("a")
+    a.href = previewPath
+    a.download = `${$data.theme}-${$data.dimension}-${$data.class === "4" ? "M4" : "M5"}-${$data.programme}.jpg`
+    document.body.appendChild(a)
+    a.click()
+    a.remove()
+  }
 </script>
 
 <svelte:head>
@@ -68,7 +77,7 @@
     >
       <h1 class="text-center text-xl font-semibold sm:text-left sm:text-4xl">ตารางสอบ Final - ปีการศึกษา 2/2564</h1>
       <p class="text-label text-center font-light sm:text-left sm:text-xl">เลือกแบบที่ต้องการแล้วกด Download เลย !</p>
-      <button class="btn-primary px-6 py-2 text-gray-700">Download</button>
+      <button on:click={downloadFile} class="btn-primary px-6 py-2 text-gray-700">Download</button>
     </div>
   </header>
   <article class="grid grid-cols-1 py-4 sm:grid-cols-2">
