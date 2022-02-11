@@ -128,13 +128,13 @@
             <ImageButton name="theme" value="pink">
               <img src={previewPink} alt="Pink Theme" />
             </ImageButton>
-            <figcaption>Pink 💖</figcaption>
+            <figcaption>Sugarcandy 💖</figcaption>
           </figure>
           <figure class="flex flex-col items-center justify-center space-y-2 text-center text-sm">
             <ImageButton name="theme" value="red">
               <img src={previewRed} alt="Red Theme" />
             </ImageButton>
-            <figcaption>Red ❤️</figcaption>
+            <figcaption>Roses and Ribbons ❤️</figcaption>
           </figure>
         </div>
       </div>
