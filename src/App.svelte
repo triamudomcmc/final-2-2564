@@ -59,7 +59,9 @@
 
 <Head />
 
-<main class="min-h-screen bg-[#fafafa] px-2 py-2 font-display sm:my-10 sm:py-8 sm:px-12 lg:px-24">
+<main
+  class="mx-6 my-6 min-h-screen rounded-2xl bg-[#fafafa] px-10 py-2 font-display sm:m-8 sm:my-10 sm:rounded-md sm:py-8 sm:px-12 lg:px-24"
+>
   <header class="py-4">
     <nav class="mb-4 flex justify-between py-4">
       <span class="select-none text-4xl font-bold text-gray-700">กช.</span>
@@ -81,7 +83,7 @@
       </div>
     </nav>
     <div
-      class="flex flex-col items-center space-y-4 bg-[#db7ca4] px-6 py-12 text-white sm:items-start sm:px-24 sm:py-16"
+      class="flex flex-col items-center space-y-4 bg-[#db7ca4] px-2 py-12 text-white sm:items-start sm:px-24 sm:py-16"
     >
       <h1 class="text-center text-xl font-semibold sm:text-left sm:text-4xl">ตารางสอบ Final - ภาคเรียนที่ 2/2564</h1>
       <p class="text-label text-center font-light sm:text-left sm:text-xl">เลือกแบบที่ต้องการแล้วกด Download เลย !</p>
