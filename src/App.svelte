@@ -17,32 +17,39 @@
 
   const size = "2em"
 
-  function getPath(_data) {
-    const getProgramme = (programme: TProgramme) => {
-      switch (programme) {
-        case "sci-math":
-          return "1"
-        case "arts-math":
-          return "2"
-        case "arts-lang":
-          return "3"
-        default:
-          return "-1"
-      }
+  const getProgramme = (programme: TProgramme) => {
+    switch (programme) {
+      case "sci-math":
+        return "1"
+      case "arts-math":
+        return "2"
+      case "arts-lang":
+        return "3"
+      default:
+        return "-1"
     }
+  }
 
+  function getPreviewPath(_data) {
     return `/assets/${_data.theme}/${_data.dimension}/${_data.class === "4" ? "M4" : "M5"}/${getProgramme(
       $data.programme
     )}.JPG`
   }
 
-  $: previewPath = getPath($data)
+  function getSourcePath(_data) {
+    return `/src/${_data.theme}/${_data.dimension}/${_data.class === "4" ? "M4" : "M5"}/${getProgramme(
+      $data.programme
+    )}.JPG`
+  }
+
+  $: previewPath = getPreviewPath($data)
+  $: srcPath = getSourcePath($data)
 
   function downloadFile() {
     window.gtag("event", "generate_schedule", { data: $data })
 
     const a = document.createElement("a")
-    a.href = previewPath
+    a.href = srcPath
     a.download = `${$data.theme}-${$data.dimension}-${$data.class === "4" ? "M4" : "M5"}-${$data.programme}.jpg`
     document.body.appendChild(a)
     a.click()
