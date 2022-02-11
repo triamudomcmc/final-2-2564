@@ -23,4 +23,8 @@
   .text-label {
     @apply mt-4 text-lg;
   }
+
+  /* body {
+    @apply bg-pink-200;
+  } */
 } ;

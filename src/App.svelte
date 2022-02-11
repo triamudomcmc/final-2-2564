@@ -52,7 +52,7 @@
 
 <Head />
 
-<main class="min-h-screen bg-[#fafafa] px-2 py-2 font-display sm:py-8 sm:px-12 lg:px-24">
+<main class="min-h-screen bg-[#fafafa] px-2 py-2 font-display sm:my-10 sm:py-8 sm:px-12 lg:px-24">
   <header class="py-4">
     <nav class="mb-4 flex justify-between py-4">
       <span class="select-none text-4xl font-bold text-gray-700">กช.</span>
@@ -78,68 +78,70 @@
     >
       <h1 class="text-center text-xl font-semibold sm:text-left sm:text-4xl">ตารางสอบ Final - ภาคเรียนที่ 2/2564</h1>
       <p class="text-label text-center font-light sm:text-left sm:text-xl">เลือกแบบที่ต้องการแล้วกด Download เลย !</p>
-      <button on:click={downloadFile} class="btn-primary px-6 py-2 text-gray-700">Download</button>
+      <!-- <button on:click={downloadFile} class="btn-primary px-6 py-2 text-gray-700">Download</button> -->
     </div>
   </header>
-  <article class="grid grid-cols-1 py-4 sm:grid-cols-2">
-    <section class="bo order-last border-gray-600 sm:order-first sm:pr-4">
-      <p class="text-label">ระดับชั้น</p>
-      <div class="flex space-x-2 py-2">
-        <Button name="class" value="4">ม.4</Button>
-        <Button name="class" value="5">ม.5</Button>
-      </div>
-      <p class="text-label">สายการเรียน</p>
-      <div class="flex space-x-2 py-2">
-        <Button name="programme" value="sci-math">วิทย์-คณิต</Button>
-        <Button name="programme" value="arts-math">ศิลป์คำนวณ</Button>
-        <Button name="programme" value="arts-lang">ศิลป์ภาษา</Button>
-      </div>
-      <p class="text-label">ขนาดหน้าจอ</p>
-      <div class="grid grid-cols-2 items-start gap-4 py-2 sm:grid-cols-4">
-        <figure class="flex flex-col items-center justify-center space-y-2 text-center text-sm">
-          <ImageButton name="dimension" value="ipad">
-            <img src={iPad} alt="iPad Resolution" />
-          </ImageButton>
-          <figcaption>iPad (3:4)</figcaption>
-        </figure>
-        <figure class="flex flex-col items-center justify-center space-y-2 text-center text-sm">
-          <ImageButton name="dimension" value="iphonex">
-            <img src={iPhoneX} alt="iPhone X Resolution" />
-          </ImageButton>
-          <figcaption>iPhone X (19.5:9)</figcaption>
-        </figure>
-        <figure class="flex flex-col items-center justify-center space-y-2 text-center text-sm">
-          <ImageButton name="dimension" value="iphone8">
-            <img src={iPhone8} alt="iPhone 8 Resolution" />
-          </ImageButton>
-          <figcaption>iPhone 8 (16:9)</figcaption>
-        </figure>
-        <figure class="flex flex-col items-center justify-center space-y-2 text-center text-sm">
-          <ImageButton name="dimension" value="huawei">
-            <img src={huawei} alt="Huawei Resolution" />
-          </ImageButton>
-          <figcaption>Huawei (19.5:9, centered)</figcaption>
-        </figure>
-      </div>
-      <p class="text-label">ธีมสี</p>
-      <div class="grid grid-cols-2 items-start gap-4 py-2">
-        <figure class="flex flex-col items-center justify-center space-y-2 text-center text-sm">
-          <ImageButton name="theme" value="pink">
-            <img src={previewPink} alt="Pink Theme" />
-          </ImageButton>
-          <figcaption>Pink 💖</figcaption>
-        </figure>
-        <figure class="flex flex-col items-center justify-center space-y-2 text-center text-sm">
-          <ImageButton name="theme" value="red">
-            <img src={previewRed} alt="Red Theme" />
-          </ImageButton>
-          <figcaption>Red ❤️</figcaption>
-        </figure>
+  <article class="grid grid-cols-1 items-start gap-8 py-4 sm:grid-cols-[1fr_2fr]">
+    <section class="order-first flex flex-col justify-center border-gray-600 sm:order-last">
+      <div class="flex flex-col">
+        <p class="text-label">ระดับชั้น</p>
+        <div class="flex space-x-2 py-2">
+          <Button name="class" value="4">ม.4</Button>
+          <Button name="class" value="5">ม.5</Button>
+        </div>
+        <p class="text-label">สายการเรียน</p>
+        <div class="flex space-x-2 py-2">
+          <Button name="programme" value="sci-math">วิทย์-คณิต</Button>
+          <Button name="programme" value="arts-math">ศิลป์คำนวณ</Button>
+          <Button name="programme" value="arts-lang">ศิลป์ภาษา</Button>
+        </div>
+        <p class="text-label">ขนาดหน้าจอ</p>
+        <div class="grid grid-cols-2 items-start gap-4 py-2 sm:grid-cols-4">
+          <figure class="flex flex-col items-center justify-center space-y-2 text-center text-sm">
+            <ImageButton name="dimension" value="ipad">
+              <img src={iPad} alt="iPad Resolution" />
+            </ImageButton>
+            <figcaption>iPad (3:4)</figcaption>
+          </figure>
+          <figure class="flex flex-col items-center justify-center space-y-2 text-center text-sm">
+            <ImageButton name="dimension" value="iphonex">
+              <img src={iPhoneX} alt="iPhone X Resolution" />
+            </ImageButton>
+            <figcaption>iPhone X (19.5:9)</figcaption>
+          </figure>
+          <figure class="flex flex-col items-center justify-center space-y-2 text-center text-sm">
+            <ImageButton name="dimension" value="iphone8">
+              <img src={iPhone8} alt="iPhone 8 Resolution" />
+            </ImageButton>
+            <figcaption>iPhone 8 (16:9)</figcaption>
+          </figure>
+          <figure class="flex flex-col items-center justify-center space-y-2 text-center text-sm">
+            <ImageButton name="dimension" value="huawei">
+              <img src={huawei} alt="Huawei Resolution" />
+            </ImageButton>
+            <figcaption>Huawei (19.5:9, centered)</figcaption>
+          </figure>
+        </div>
+        <p class="text-label">ธีมสี</p>
+        <div class="grid grid-cols-2 items-start gap-4 py-2">
+          <figure class="flex flex-col items-center justify-center space-y-2 text-center text-sm">
+            <ImageButton name="theme" value="pink">
+              <img src={previewPink} alt="Pink Theme" />
+            </ImageButton>
+            <figcaption>Pink 💖</figcaption>
+          </figure>
+          <figure class="flex flex-col items-center justify-center space-y-2 text-center text-sm">
+            <ImageButton name="theme" value="red">
+              <img src={previewRed} alt="Red Theme" />
+            </ImageButton>
+            <figcaption>Red ❤️</figcaption>
+          </figure>
+        </div>
       </div>
       <button on:click={downloadFile} class="btn-primary mt-6 px-6 py-2 text-gray-700">Download</button>
     </section>
-    <section class="order-first sm:order-last sm:pl-4">
-      <img src={previewPath} alt="Preview" class="max-h-[500px] w-full rounded-md object-contain" />
+    <section class="order-last pt-6 sm:order-first sm:pt-0">
+      <img src={previewPath} alt="Preview" class="w-full rounded-md object-contain" />
     </section>
   </article>
 </main>
