@@ -9,14 +9,14 @@
   <meta property="og:url" content="https://final-schedule.tucm.cc/" />
   <meta property="og:title" content="ตารางสอบปลายภาคเรียนที่ 2/2564" />
   <meta property="og:description" content="เลือกแบบที่ต้องการแล้วกด Download เลย !" />
-  <meta property="og:image" content="/preview.jpg" />
+  <meta property="og:image" content="/meta/preview.jpg" />
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="twitter:url" content="https://final-schedule.tucm.cc/" />
   <meta property="twitter:title" content="ตารางสอบปลายภาคเรียนที่ 2/2564" />
   <meta property="twitter:description" content="เลือกแบบที่ต้องการแล้วกด Download เลย !" />
-  <meta property="twitter:image" content="/preview.jpg" />
+  <meta property="twitter:image" content="/meta/preview.jpg" />
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-F6SR073ME3"></script>
